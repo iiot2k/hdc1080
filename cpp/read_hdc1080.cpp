@@ -19,8 +19,8 @@
 
 int main()
 {
-	double temperature;
-	double humidity;
+    double temperature;
+    double humidity;
 
     bool ret = hdc1080::init(PORT, false); // heater off
 
