@@ -15,18 +15,18 @@ Port addresses 0 to 9 are possible.<br>
 ***return:*** ```<string>``` error text after call function.<br>
 
 > ### Init sensor<br>
-```init(port, heater)```<br>
+```init(port)```<br>
 - ***port:*** ```<integer>``` 0..9<br>
-- ***heater:*** ```<boolean>``` if ```false``` heater off, if ```true``` heater on.<br>
 - ***return:*** ```<boolean>```, ```true``` on ok, ```false``` on error.<br>
 
 > ### Turn internal heater on/off<br>
-```set_heater(port, heater)```<br>
+```set_heater(port, heater_time, callback)```<br>
 - ***port:*** ```<integer>``` 0..9<br>
-- ***heater:*** ```<boolean>``` if ```false``` heater off, if ```true``` heater on.<br>
-- ***return:*** ```<boolean>```, ```true``` on ok, ```false``` on error.<br>
+- ***heater_time*** ```<integer>``` 0..255, heater_time x 50ms (max 255 x 50ms = 12.75s), 0 turns heater off<br>
+- ***callback:*** ```<function> (retval)```
+    - **retval** ```<boolean>``` ```true``` on ok, ```false``` on error.<br> 
 
 > ### Reads temperature and humidity<br>
-```read_sync(port, heater)```<br>
+```read_sync(port)```<br>
 - ***port:*** ```<integer>``` 0..9<br>
 - ***return:*** ```<number array>``` first temperature in °C, second humidity in %, ```<undefined>``` on error.<br>

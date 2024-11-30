@@ -25,22 +25,23 @@ const char* error_text();
 
 /**
  * @brief inits hdc1080 sensor
+ * if heater_time > 0 function blocks until heater is off
  * @param port i2c port (0..9)
- * @heater true: heater on, false: heater off
  * @returns true: ok, false: error
  */
-bool init(uint8_t port, bool heater);
+bool init(uint8_t port);
 
 /**
  * @brief turns hdc1080 sensor heater on/off
+ * if heater_time > 0 function blocks until heater is off
  * @param port i2c port (0..9)
- * @heater true: heater on, false: heater off
+ * @heater_time turn on time in heater_time x 50ms (max 255 x 50ms = 12.75s), 0 turns heater off
  * @returns true: ok, false: error
  */
-bool heater(uint8_t port, bool heater);
+bool set_heater(uint8_t port, uint8_t heater_time);
 
 /**
- * @brief reads single hdc1080 input
+ * @brief reads hdc1080 temperature and humidity
  * @param port i2c port (0..9)
  * @param temperature to read and store
  * @param humidity to read and store

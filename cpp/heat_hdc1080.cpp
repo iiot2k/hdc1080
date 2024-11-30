@@ -1,13 +1,13 @@
 /*
- * example reads hdc1080 sensor and prints value
+ * example turns heater on and reads hdc1080 sensor and prints value
  *
  * build:
  * > make
  *
   * run:
- * > ./read_hdc1080
+ * > ./heat_hdc1080
  *
- * read_hdc1080.cpp
+ * heat_hdc1080.cpp
  *
  */
 
@@ -16,6 +16,7 @@
 #include "hdc1080_lib.h"
 
 #define PORT 1 // i2c-1
+#define HEAT_TIME 2 // 2 * 50ms = 100ms
 
 int main()
 {
@@ -27,6 +28,14 @@ int main()
     if (!ret)
     {
         printf("error on init: %s\n", hdc1080::error_text());
+        return 1;
+    }
+
+    ret = hdc1080::set_heater(PORT, HEAT_TIME);
+
+    if (!ret)
+    {
+        printf("error on heat: %s\n", hdc1080::error_text());
         return 1;
     }
 

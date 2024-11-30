@@ -2,7 +2,7 @@
   "name": "@iiot2k/hdc1080",
   "bugs": "https://github.com/iiot2k/hdc1080/issues",
   "description": "hdc1080 temperature and humidity sensor",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "license": "Apache-2.0",
   "private": false,
   "author": {
