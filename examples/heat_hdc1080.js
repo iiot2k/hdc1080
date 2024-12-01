@@ -22,8 +22,8 @@ else {
             if (data === undefined)
                 console.log(sensor.error_text());
             else {
-                console.log("Temperature:", data[0].toFixed(1), "°C");
-                console.log("Humidity:", data[1].toFixed(1), "%");
+                console.log("Temperature:", data[0], "°C");
+                console.log("Humidity:", data[1], "%");
             }
         }
     });
