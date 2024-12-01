@@ -46,11 +46,10 @@ or add in your ```package.json```:
 In a humid environment, condensation forms on the sensor.<br>
 The sensor cannot then measure correctly.<br>
 This condensation can be removed using the internal heater.<br>
-The manual does not describe the function of the heater in detail.<br>
 After researching the forums, the heater function is described as follows:<br>
 - The heater is only switched on during measurements (~20ms).
 - The sensor cannot warm up at slow cycle.<br>
-- For heating, the sensor must be queried with a 50ms cycle.<br>
+- For heating, the sensor must be queried with a fast cycle.<br>
 - If there is a lot of condensation, the sensor switches from 100% humidity to 0%.<br>
 
 The library turns on the heater and queries the sensor every 50ms to heat up the sensor.<br>
