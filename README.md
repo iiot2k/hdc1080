@@ -36,7 +36,7 @@ or add in your ```package.json```:
 - internal heater
 
 ## Usage
-- The output value is mV or adc raw data.
+- The output value is °C and %rH.
 - Enable I2C with raspi-config.
 - In this case i2c-1 is enabled (port=1).
 - If you use i2c-0 port add<br>
