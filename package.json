@@ -1,0 +1,29 @@
+{
+  "name": "@iiot2k/hdc1080",
+  "bugs": "https://github.com/iiot2k/hdc1080/issues",
+  "description": "hdc1080 temperature and humidity sensor",
+  "version": "3.0.0",
+  "license": "Apache-2.0",
+  "private": false,
+  "author": {
+    "name": "Derya Y.",
+    "email": "iiot2k@gmail.com"
+  },
+
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iiot2k/hdc1080"
+  },
+
+  "main": "hdc1080.js",
+
+  "keywords": ["iot", "iiot2k", "raspberry pi", "rpi", 
+    "hdc1080", "temperature", "humidity", "sensor"
+  ],
+
+  "cpu" : ["arm64"],
+  "os": ["linux"],
+  "engines": {
+    "node": ">=12.0.0"
+  }
+}
